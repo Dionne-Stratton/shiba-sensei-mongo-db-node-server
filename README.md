@@ -1,4 +1,4 @@
-# Rabbi-Rabbit - Backend
+# Shiba-Senei - Server
 
 To learn more about the over all project please visit the repos listed below.
 
@@ -24,7 +24,6 @@ To learn more about the over all project please visit the repos listed below.
 
 [Native Mobile App](https://github.com/Rabbi-Rabbit/react-native-mobile-app)
 
-
 ## Tech Stack
 
 - MongoDB / Mongoose
@@ -41,7 +40,7 @@ To learn more about the over all project please visit the repos listed below.
 
 | data             | type        | required  |
 | ---------------- | ----------- | --------- |
-| _id              | number      | generated |
+| \_id             | number      | generated |
 | email            | string      | yes       |
 | password         | string      | yes       |
 | user_lessons     | [String]    | no        |
@@ -50,11 +49,11 @@ To learn more about the over all project please visit the repos listed below.
 
 ### User Pins
 
-| data             | type     | required  |
-| ---------------- | -------- | --------- |
-| email            | string   | yes       |
-| pin              | string   | yes       |
-| expireAt         | date     | generated |
+| data     | type   | required  |
+| -------- | ------ | --------- |
+| email    | string | yes       |
+| pin      | string | yes       |
+| expireAt | date   | generated |
 
 ### Vocabulary Set
 
@@ -67,15 +66,15 @@ To learn more about the over all project please visit the repos listed below.
 
 ### Vocabulary
 
-| data               | type   | required  |
-| ------------------ | ------ | --------- |
-| _id                | number | generated |
-| hebrew             | string | no        |
-| hebrew_with_nikkud | string | no        |
-| reading            | string | no        |
-| meaning            | string | no        |
-| lesson             | number | no        |
-| gender             | string | no        |
+| data    | type   | required  |
+| ------- | ------ | --------- |
+| \_id    | number | generated |
+| kanji   | string | no        |
+| kana    | string | no        |
+| reading | string | no        |
+| meaning | string | no        |
+| lesson  | number | no        |
+| gender  | string | no        |
 
 ## End Points
 
@@ -123,7 +122,7 @@ To learn more about the over all project please visit the repos listed below.
 
 • You'll need to create your own .env file with:
 
-MONGODB_URL={your_key_here}<br>
+MONGODB_URL={your_key_here}
 JWT_SECRET={your_secret_here}
 EMAIL={your_email_here}
 PASSWORD={your_password_here}

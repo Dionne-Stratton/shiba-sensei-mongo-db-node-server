@@ -13,7 +13,7 @@ const vocabSetSchema = new mongoose.Schema({
   rank: Number, // rank of vocab: 0 = copper, 1 = bronze, 2 = silver, 3 = gold, 4 = platinum
 });
 
-const userSchema = new mongoose.Schema({
+const inuUserSchema = new mongoose.Schema({
   email: {
     type: String,
     unique: true,
@@ -68,4 +68,4 @@ userSchema.methods.comparePassword = function (pwd) {
   });
 };
 
-mongoose.model("User", userSchema);
+mongoose.model("User", inuUserSchema);
