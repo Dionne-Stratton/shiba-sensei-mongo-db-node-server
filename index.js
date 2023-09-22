@@ -7,7 +7,7 @@ const server = require("./api/server");
 
 const mongoose = require("mongoose");
 
-const URI = process.env.MONGODB_URL_ALT;
+const URI = process.env.SHIBA_MONGODB_CONNECT;
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(URI, {

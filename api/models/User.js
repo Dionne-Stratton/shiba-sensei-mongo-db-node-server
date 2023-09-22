@@ -10,10 +10,10 @@ const vocabSetSchema = new mongoose.Schema({
   },
   next_review: Date, // date of next review
   lesson_number: Number, // lesson number
-  rank: Number, // rank of vocab: 0 = copper, 1 = bronze, 2 = silver, 3 = gold, 4 = platinum
+  rank: Number, // rank of vocab
 });
 
-const inuUserSchema = new mongoose.Schema({
+const UserSchema = new mongoose.Schema({
   email: {
     type: String,
     unique: true,
@@ -28,7 +28,7 @@ const inuUserSchema = new mongoose.Schema({
   user_vocab: [vocabSetSchema], // array of vocabLevelSchema
 });
 
-userSchema.pre("save", function (next) {
+UserSchema.pre("save", function (next) {
   const user = this;
   if (!user.isModified("password")) {
     return next();
@@ -50,7 +50,7 @@ userSchema.pre("save", function (next) {
   });
 });
 
-userSchema.methods.comparePassword = function (pwd) {
+UserSchema.methods.comparePassword = function (pwd) {
   const user = this;
 
   return new Promise((resolve, reject) => {
@@ -68,4 +68,4 @@ userSchema.methods.comparePassword = function (pwd) {
   });
 };
 
-mongoose.model("User", inuUserSchema);
+mongoose.model("User", UserSchema);

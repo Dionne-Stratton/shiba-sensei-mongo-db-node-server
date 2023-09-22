@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const inuVocabSchema = new mongoose.Schema({
+const VocabSchema = new mongoose.Schema({
   kanji: String,
   kana: String,
   reading: String,
@@ -9,4 +9,4 @@ const inuVocabSchema = new mongoose.Schema({
   gender: String,
 });
 
-mongoose.model("Vocabulary", inuVocabSchema);
+mongoose.model("Vocabulary", VocabSchema);
